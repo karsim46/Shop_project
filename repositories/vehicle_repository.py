@@ -37,3 +37,14 @@ def select(id):
         vehicle = Vehicle(result['description'], result['engine'], result['gearbox'], result['colour'], result['price'], result['year'], result['quantity'], result['for_sale'], manufacturer, result['id'])
         return vehicle
 
+# user feature to be able to delete all inventory list
+def delete_all():
+    sql = "DELETE FROM vehicles"
+    run_sql(sql)
+
+# delete one vehicle from inventory
+def delete(id):
+    sql = "DELETE FROM vehicles WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
+    
