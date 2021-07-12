@@ -22,7 +22,7 @@ def new_vehicle():
 #create 
 #POST '/vehicles'
 @vehicles_blueprint.route("/vehicles", methods =['POST'])
-def create_vehicles():
+def create_vehicle():
     description = request.form['description']
     engine = request.form['engine']
     gearbox = request.form['gearbox']
@@ -35,3 +35,5 @@ def create_vehicles():
     vehicle = Vehicle(description, engine, gearbox, colour, price, year, quantity, for_sale, manufacturer)
     vehicle_repository.save(vehicle)
     return redirect('/vehicles')
+
+
