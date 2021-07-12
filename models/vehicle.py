@@ -12,5 +12,5 @@ class Vehicle:
         self.manufacturer = manufacturer
         self.id = id
 
-    def display_name(self):
-        return f"{self.make} {self.model}"
+    # def display_name(self):
+    #     return f"{self.make} {self.model}"

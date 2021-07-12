@@ -17,7 +17,7 @@ manufacturer_repository.save(manufacturer2)
 vehicle1 = Vehicle("DMC", 3.0, "manual", "Aluminium", 30000, 1985, 1, True, manufacturer1)
 vehicle_repository.save(vehicle1)
 
-vehicle2 = Vehicle("Charger", 5.0, "Automatic", "Orange", 49000, 1979,1,True,manufacturer2)
+vehicle2 = Vehicle("Charger", 5.0, "Automatic", "Orange", 49000, 1979, 1,True, manufacturer2)
 vehicle_repository.save(vehicle2)
 
 
