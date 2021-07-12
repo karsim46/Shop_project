@@ -70,6 +70,13 @@ def update_vehicle(id):
     vehicle_repository.update(vehicle)
     return redirect('/vehicles')
 
+# DELETE
+# DELETE '/vehicles/<id>'
+@vehicles_blueprint.route("/vehicles/<id>/delete", methods=['POST'])
+def delete_vehicle(id):
+    vehicle_repository.delete(id)
+    return redirect('/vehicles')
+
 
 
 
