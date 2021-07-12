@@ -36,6 +36,13 @@ def create_vehicle():
     vehicle_repository.save(vehicle)
     return redirect('/vehicles')
 
+# SHOW
+# GET '/vehicles/<id>'
+@vehicles_blueprint.route("/vehicles/<id>", methods= ['GET'])
+def show_vehicle(id):
+    vehicle = vehicle_repository.select(id)
+    return render_template('vehicles/show.html', vehicle = vehicle)
+
 
 
 
