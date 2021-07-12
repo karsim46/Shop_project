@@ -8,9 +8,11 @@ import repositories.manufacturer_repository as manufacturer_repository
 vehicle_repository.delete_all()
 manufacturer_repository.delete_all()
 
-vehicle1 = Manufacturer("Delorean")
-manufacturer_repository.save(vehicle1)
+manufacturer1 = Manufacturer("Delorean")
+manufacturer_repository.save(manufacturer1)
 
-vehicle2 = Manufacturer("Dodge")
-manufacturer_repository.save(vehicle2)
+manufacturer2 = Manufacturer("Dodge")
+manufacturer_repository.save(manufacturer2)
+
+
 
