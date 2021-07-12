@@ -7,7 +7,7 @@ import repositories.manufacturer_repository as manufacturer_repository
 # save feature for being able to add a  vehicle to repo.
 def save(vehicle):
     sql = "INSERT INTO vehicles (description, engine, gearbox, colour, price, year, quantity, for_sale, manufacturer_id) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s) RETURNING *"
-    values = [vehicle.description, vehicle.engine, vehicle.gearbox, vehicle.colour, vehicle.price, vehicle.year, vehicle.quantity, vehicle.for_sale, vehicle.manufacturer_id]
+    values = [vehicle.description, vehicle.engine, vehicle.gearbox, vehicle.colour, vehicle.price, vehicle.year, vehicle.quantity, vehicle.for_sale, vehicle.manufacturer.id]
     results = run_sql(sql, values)
     id = results[0]['id']
     vehicle.id = id
