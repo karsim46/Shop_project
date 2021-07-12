@@ -10,3 +10,4 @@ vehicles_blueprint = Blueprint("vehicles", __name__)
 def vehicles():
     vehicles = vehicle_repository.select_all() 
     return render_template("vehicles/index.html", all_vehicles = vehicles)
+
