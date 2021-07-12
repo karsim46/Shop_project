@@ -24,3 +24,15 @@ def select_all():
         manufacturers.append(manufacturer)
     return manufacturers
 
+# Select one manufacturer from list
+def select(id):
+    manufacturer = None
+    sql = "SELECT * FROM manufacturers WHERE id = %s"
+    values = [id]
+    result = run_sql(sql, values)[0]
+
+    if result is not None:
+        manufacturer = Manufacturer(result['make'], result['id'])
+        return manufacturer
+
+
