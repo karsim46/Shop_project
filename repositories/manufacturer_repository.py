@@ -52,7 +52,18 @@ def update(manufacturer):
     values = [manufacturer.make, manufacturer.id]
     run_sql(sql, values)
 
+# add manufacturers to vehicles list
+def vehicles(manufacturer):
+    vehicles = []
 
+    sql = "SELECT * FROM vehicles WHERE manufacturer.id = %s"
+    values = [manufacturer.id]
+    results = run_sql(sql, values)
+
+    for row in results:
+        vehicle = Vehicle(row['description'], row['engine'], row['gearbox'], row['colour'], row['price'], row['year'], row['quantity'], row['for_sale'], row['manufacturer.id', row['id']])
+        vehicles.append(vehicle)
+    return vehicles
 
 
 
