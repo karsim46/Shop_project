@@ -4,5 +4,5 @@ from models.vehicle import Vehicle
 import repositories.vehicle_repository as vehicle_repository
 import repositories.manufacturer_repository as manufacturer_repository
 
-vehicles_blueprint = Blueprint("vehicles," __name__)
+vehicles_blueprint = Blueprint("vehicles", __name__)
 
