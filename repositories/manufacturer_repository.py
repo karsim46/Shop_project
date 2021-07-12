@@ -38,7 +38,15 @@ def select(id):
 # Delete all manufacturer function created
 def delete_all():
     sql = "DELETE FROM manufacturers"
-    run_sql
+    run_sql(sql)
+
+#Delete one manufacturer from list
+def delete(id):
+    sql = "DELETE FROM manufacturers WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
+
+    
 
 
 
