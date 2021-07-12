@@ -37,3 +37,6 @@ def create_vehicle():
     return redirect('/vehicles')
 
 
+
+
+
