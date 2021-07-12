@@ -13,8 +13,10 @@ CREATE TABLE vehicles (
    engine FLOAT,
    gearbox VARCHAR(255),
    colour VARCHAR(255),
+   price = FLOAT
    year INT,
    quantity INT,
+   for_sale BOOLEAN
    vehicle_id INT REFERENCES vehicles(id)
 );
 
