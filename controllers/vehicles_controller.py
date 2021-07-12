@@ -64,9 +64,9 @@ def update_vehicle(id):
     quantity = request.form['quantity']
     for_sale = request.form['for_sale']
     manufacturer = manufacturer_repository.select(request.form['manufacturer.id'])
-    vehicle = Vehicle(description, engine, gearbox, colour, price, year, quantity, for_sale, manufacturer)
+    vehicle = Vehicle(description, engine, gearbox, colour, price, year, quantity, for_sale, manufacturer, id)
     #req help relating to class
-    print(vehicle.manufacturer.display_name)
+    print(manufacturer.vehicle.display_name())
     vehicle_repository.update(vehicle)
     return redirect('/vehicles')
 

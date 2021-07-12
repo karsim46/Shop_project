@@ -13,4 +13,5 @@ class Vehicle:
         self.id = id
 
     def display_name(self):
-        return f"{self.make} {self.model}"
+        return f"{self.make} {self.description}"
+    #how to pull in Manufacturer class?

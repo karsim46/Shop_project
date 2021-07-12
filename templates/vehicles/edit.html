@@ -1,3 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
+
+<form action="/vehicles/{{vehicle.id}}" method="post">
+<div>
+    <label for="Description"></label>
+    <input type="text" id="description" name="description" value="{{vehicle.description}}" required>
+</div></form>
 {% endblock %}
