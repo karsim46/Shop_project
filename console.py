@@ -14,5 +14,8 @@ manufacturer_repository.save(manufacturer1)
 manufacturer2 = Manufacturer("Dodge")
 manufacturer_repository.save(manufacturer2)
 
+vehicle1 = Vehicle("DMC", 3.0, "manual", "Aluminium", 30000, 1985, 1, True, manufacturer1)
+vehicle_repository.save(vehicle1)
+
 
 
