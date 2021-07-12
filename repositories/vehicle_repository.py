@@ -47,4 +47,11 @@ def delete(id):
     sql = "DELETE FROM vehicles WHERE id = %s"
     values = [id]
     run_sql(sql, values)
-    
+
+# update function- user can update inventory using this function
+def update(vehicle):
+    sql = "UPDATE vehicles SET (description, engine, gearbox, colour, price, year, quantity, for_sale,   manufacturer_id) = (%s, %s, %s, %s, %s, %s, %s, %s, %s) WHERE id = %s"
+    values = [vehicle.description, vehicle.engine, vehicle.gearbox, vehicle.colour, vehicle.price, vehicle.year, vehicle.quantity, vehicle.for_sale, vehicle.manufacturer.id, vehicle.id]
+    print(values)
+    run_sql(sql, values)
+
