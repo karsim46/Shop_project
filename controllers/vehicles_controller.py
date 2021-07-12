@@ -21,7 +21,7 @@ def new_vehicle():
 
 #create 
 #POST '/vehicles'
-@vehicles_blueprint.route("/vehicles", methods =['POST'])
+@vehicles_blueprint.route("/vehicles", methods=['POST'])
 def create_vehicle():
     description = request.form['description']
     engine = request.form['engine']
@@ -38,10 +38,20 @@ def create_vehicle():
 
 # SHOW
 # GET '/vehicles/<id>'
-@vehicles_blueprint.route("/vehicles/<id>", methods= ['GET'])
+@vehicles_blueprint.route("/vehicles/<id>", methods=['GET'])
 def show_vehicle(id):
     vehicle = vehicle_repository.select(id)
     return render_template('vehicles/show.html', vehicle = vehicle)
+
+# EDIT
+# GET '/vehicles/<id>/edit'
+@vehicles_blueprint("/vehicles/<id>/edit", methods=['GET'])
+def edit_vehicle(id):
+    vehicle = vehicle_repository.select(id)
+    manufacturers = manufacturer_repository.select_all()
+    return render_template('vehicles/edit.html', vehicle = vehicle, all_manufacturers = manufacturers)
+
+
 
 
 
