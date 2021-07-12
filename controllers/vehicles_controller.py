@@ -1,3 +1,4 @@
+from models.manufacturer import Manufacturer
 from flask import Flask, render_template, request, redirect
 from flask import Blueprint
 from models.vehicle import Vehicle
@@ -10,6 +11,13 @@ vehicles_blueprint = Blueprint("vehicles", __name__)
 def vehicles():
     vehicles = vehicle_repository.select_all() 
     return render_template("vehicles/index.html", all_vehicles = vehicles)
+
+#NEW
+# GET '/vehicles/new'
+@vehicles_blueprint.route("/vehicles/new", methods=['GET'])
+def new_vehicle():
+    manufacturers = manufacturer_repository.select_all()
+    return render_template("/vehicles/new.html", all_manufacturers = manufacturers)
 
 #create 
 #POST '/vehicles'
