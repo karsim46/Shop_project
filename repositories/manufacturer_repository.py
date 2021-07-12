@@ -12,4 +12,15 @@ def save(manufacturer):
     manufacturer.id = id
     return manufacturer
 
+# Select all function for manufacturers list
+def select_all():
+    manufacturers = []
+
+    sql = "SELECT * FROM manufacturers"
+    results = run_sql(sql)
+
+    for row in results:
+        manufacturer = Manufacturer(row['make'], row['id'] )
+        manufacturers.append(manufacturer)
+    return manufacturers
 
