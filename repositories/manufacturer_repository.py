@@ -35,4 +35,14 @@ def select(id):
         manufacturer = Manufacturer(result['make'], result['id'])
         return manufacturer
 
+# Delete all manufacturer function created
+def delete_all():
+    sql = "DELETE FROM manufacturers"
+    run_sql
+
+
+
+
+
+
 
