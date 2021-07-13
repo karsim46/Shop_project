@@ -3,8 +3,7 @@ DROP TABLE IF EXISTS manufacturers;
 
 CREATE TABLE manufacturers (
    id SERIAL PRIMARY KEY,
-   make VARCHAR(255),
-   model VARCHAR(255)
+   name VARCHAR(255)
 );
 
 CREATE TABLE vehicles (
@@ -13,11 +12,13 @@ CREATE TABLE vehicles (
    engine FLOAT,
    gearbox VARCHAR(255),
    colour VARCHAR(255),
-   price = FLOAT
+   price FLOAT,
    year INT,
    quantity INT,
-   for_sale BOOLEAN
-   vehicle_id INT REFERENCES vehicles(id)
+   for_sale BOOLEAN,
+   make VARCHAR(255),
+   model VARCHAR(255),
+   manufacturer_id INT REFERENCES manufacturers(id)
 );
 
 

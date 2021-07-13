@@ -5,8 +5,8 @@ from models.vehicle import Vehicle
 
 # Manufacture save function added
 def save(manufacturer):
-    sql = "INSERT INTO manufacturers(make) VALUES (%s) RETURNING *"
-    values = [manufacturer.make]
+    sql = "INSERT INTO manufacturers(name) VALUES (%s) RETURNING *"
+    values = [manufacturer.name]
     results = run_sql(sql, values)
     id = results[0]['id']
     manufacturer.id = id
@@ -20,7 +20,7 @@ def select_all():
     results = run_sql(sql)
 
     for row in results:
-        manufacturer = Manufacturer(row['make'], row['id'] )
+        manufacturer = Manufacturer(row['name'], row['id'] )
         manufacturers.append(manufacturer)
     return manufacturers
 
@@ -32,7 +32,7 @@ def select(id):
     result = run_sql(sql, values)[0]
 
     if result is not None:
-        manufacturer = Manufacturer(result['make'], result['id'])
+        manufacturer = Manufacturer(result['name'], result['id'])
         return manufacturer
 
 # Delete all manufacturer function created
@@ -48,8 +48,8 @@ def delete(id):
 
 # Update manufacturer function
 def update(manufacturer):
-    sql = "UPDATE manufacturers SET (make) = (%s) WHERE id = %s"
-    values = [manufacturer.make, manufacturer.id]
+    sql = "UPDATE manufacturers SET (name) = (%s) WHERE id = %s"
+    values = [manufacturer.name, manufacturer.id]
     run_sql(sql, values)
 
 # add manufacturers to vehicles list
@@ -61,7 +61,7 @@ def vehicles(manufacturer):
     results = run_sql(sql, values)
 
     for row in results:
-        vehicle = Vehicle(row['description'], row['engine'], row['gearbox'], row['colour'], row['price'], row['year'], row['quantity'], row['for_sale'], row['manufacturer.id', row['id']])
+        vehicle = Vehicle(row['description'], row['engine'], row['gearbox'], row['colour'], row['price'], row['year'], row['quantity'], row['for_sale'], row['manufacturer.id', row['make'], row['id']])
         vehicles.append(vehicle)
     return vehicles
 

@@ -1,7 +1,7 @@
-from models.manufacturer import Manufacturer
 from flask import Flask, render_template, request, redirect
 from flask import Blueprint
 from models.vehicle import Vehicle
+from models.manufacturer import Manufacturer
 import repositories.vehicle_repository as vehicle_repository
 import repositories.manufacturer_repository as manufacturer_repository
 
@@ -31,8 +31,9 @@ def create_vehicle():
     year = request.form['year']
     quantity = request.form['quantity']
     for_sale = request.form['for_sale']
+    make = request.form['make']
     manufacturer = manufacturer_repository.select(request.form['manufacturer.id'])
-    vehicle = Vehicle(description, engine, gearbox, colour, price, year, quantity, for_sale, manufacturer)
+    vehicle = Vehicle(description, engine, gearbox, colour, price, year, quantity, for_sale, make, manufacturer)
     vehicle_repository.save(vehicle)
     return redirect('/vehicles')
 
@@ -63,10 +64,11 @@ def update_vehicle(id):
     year = request.form['year']
     quantity = request.form['quantity']
     for_sale = request.form['for_sale']
+    make = request.form['make']
     manufacturer = manufacturer_repository.select(request.form['manufacturer.id'])
-    vehicle = Vehicle(description, engine, gearbox, colour, price, year, quantity, for_sale, manufacturer, id)
+    vehicle = Vehicle(description, engine, gearbox, colour, price, year, quantity, for_sale, manufacturer, make, id)
     #req help relating to class
-    print(manufacturer.vehicle.display_name())
+    print(vehicle.display_name())
     vehicle_repository.update(vehicle)
     return redirect('/vehicles')
 
