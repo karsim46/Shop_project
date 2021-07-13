@@ -4,7 +4,7 @@
 <form action="/vehicles/{{vehicle.id}}" method="post">
 <div>
     <label for="description">Description:</label>
-    <input type="text" id="description" name="description" value="{{vehicle.description}}" required>
+    <input type="text" id="description" name="description" value="{{vehicle.description}}" required autofocus>
 </div>
 
 <div>
@@ -42,7 +42,23 @@
     <input type= boolean id="for_sale" name="for_sale" value="{{vehicle.for_sale}}" required>
 </div>
 
+<div>
+    <label for="completed">Make:</label>
+    <input type="text" id="make" name="make" value="{{vehicle.make}}" required>
+</div>
 
+<div>
+<label for="manufacturer">Manufacturer:</label>
+<select id="manufacturer" name="manufacturer_id">
+  {% for manufacturer in all_manufacturers %}
+    <option value="{{ manufacturer.id }}"
+      {% if vehicle.manufacturer.id == manufacturer.id %} selected="selected"{% endif %}>
+      {{ vehicle.display_name() }}
+    </option>
+    {% endfor %}
+</select>
+</div>
+<button type="submit">Update Vehicle</button>
 
 </form>
 {% endblock %}
