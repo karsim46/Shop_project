@@ -1,3 +1,21 @@
 {% extends "base.html" %}
 {% block content %}
+
+<div class="vehicle-container">
+
+  {% for vehicle in all_vehicles %}
+    <div class="vehicle">
+        <div class="content">
+            <a href="/vehicles/{{vehicle.id}}">{{vehicle.description}} <span>Description</span></a>
+             <div class="engine">
+            Vehicle id:{{vehicle.id}}
+            {{vehicle.engine}}
+            <span class="gearbox">{{vehicle.gearbox}}</span>
+            <p><i>{{vehicle.display_name()}}</i></p>
+         </div>
+        </div class="buttons">
+    </div>
+{% endfor %}   
+   
+  </div>
 {% endblock %}
