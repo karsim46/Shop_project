@@ -1,4 +1,21 @@
 {% extends "base.html" %}
 {% block content %}
-new vehicle page?
+
+<div class="new-vehicle">
+    <form action="/vehicles" method= "post">
+    
+        <div>
+            <label for="description">Description:</label>
+            <input type="text" id="description" name="description" placeholder="Description" required autofocus>
+        </div>
+
+        <div>
+            <label for="engine">Engine:</label>
+            <input type= float id="engine" name="engine" placeholder="Engine" required>
+        </div>
+
+    </form>
+</div>
+
+
 {% endblock %}
