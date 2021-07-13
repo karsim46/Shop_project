@@ -1,6 +1,6 @@
 class Vehicle:
 
-    def __init__(self, description, engine, gearbox, colour, price, year, quantity, for_sale, manufacturer, make, id = None, ):
+    def __init__(self, description, engine, gearbox, colour, price, year, quantity, for_sale, manufacturer, make, image, id = None, ):
         
         self.description = description
         self.engine = engine
@@ -13,6 +13,7 @@ class Vehicle:
         self.manufacturer = manufacturer
         self.make = make
         self.id = id
+        self.image = image
 
     def display_name(self):
         return f"{self.make} {self.description}"

@@ -32,8 +32,9 @@ def create_vehicle():
     quantity = request.form['quantity']
     for_sale = request.form['for_sale']
     make = request.form['make']
+    image = request.form['image']
     manufacturer = manufacturer_repository.select(request.form['manufacturer.id'])
-    vehicle = Vehicle(description, engine, gearbox, colour, price, year, quantity, for_sale, make, manufacturer)
+    vehicle = Vehicle(description, engine, gearbox, colour, price, year, quantity, for_sale, make, image, manufacturer)
     vehicle_repository.save(vehicle)
     return redirect('/vehicles')
 
@@ -65,8 +66,9 @@ def update_vehicle(id):
     quantity = request.form['quantity']
     for_sale = request.form['for_sale']
     make = request.form['make']
+    image = request.form['image']
     manufacturer = manufacturer_repository.select(request.form['manufacturer.id'])
-    vehicle = Vehicle(description, engine, gearbox, colour, price, year, quantity, for_sale, manufacturer, make, id)
+    vehicle = Vehicle(description, engine, gearbox, colour, price, year, quantity, for_sale, manufacturer, make, image, id)
     #req help relating to class
     print(vehicle.display_name())
     vehicle_repository.update(vehicle)

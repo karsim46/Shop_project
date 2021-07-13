@@ -18,6 +18,7 @@ CREATE TABLE vehicles (
    for_sale BOOLEAN,
    make VARCHAR(255),
    model VARCHAR(255),
+   image TEXT,
    manufacturer_id INT REFERENCES manufacturers(id)
 );
 

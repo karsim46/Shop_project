@@ -61,7 +61,7 @@ def vehicles(manufacturer):
     results = run_sql(sql, values)
 
     for row in results:
-        vehicle = Vehicle(row['description'], row['engine'], row['gearbox'], row['colour'], row['price'], row['year'], row['quantity'], row['for_sale'], row['manufacturer.id', row['make'], row['id']])
+        vehicle = Vehicle(row['description'], row['engine'], row['gearbox'], row['colour'], row['price'], row['year'], row['quantity'], row['for_sale'], row['manufacturer.id', row['make'], row, ['image'], row['id']])
         vehicles.append(vehicle)
     return vehicles
 
