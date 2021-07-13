@@ -3,7 +3,14 @@
 <div>
     <p>{{vehicle.description}}</p>
     <hr>
-    <p>{{vehicle.engine}}</p>
+    <p>Engine: {{vehicle.engine}}</p>
+    <p>Gearbox Type: {{vehicle.gearbox}}</p>
+    <p>Vehicle Colour: {{vehicle.colour}}</p>
+    <p>Vehicle Price: £{{vehicle.price}}</p>
+    <p>Year Manufactured: {{vehicle.year}}</p>
+    <p>Quantity in Stock: {{vehicle.quantity}}</p>
+    <p>For Sale: {{vehicle.for_sale}}</p>
+    <p>{{vehicle.display_name()}}</p>
     <p><a href="/vehicles/{{vehicle.id}}/edit">Edit</a></p>
 </div>
 {% endblock %}
