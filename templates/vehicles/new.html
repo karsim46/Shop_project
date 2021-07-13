@@ -14,6 +14,47 @@
             <input type= float id="engine" name="engine" placeholder="Engine" required>
         </div>
 
+        <div>
+            <label for="gearbox">Gearbox:</label>
+            <input type= "text" id="gearbox" name="gearbox" placeholder="Gearbox" required>
+        </div>
+
+        <div>
+            <label for="colour">Colour:</label>
+            <input type= "text" id="colour" name="colour" placeholder="Colour" required>
+        </div>
+
+        <div>
+            <label for="price">Price:</label>
+            <input type= float id="price" name="price" placeholder="Price" required>
+        </div>
+
+        <div>
+            <label for="year">Year:</label>
+            <input type= int id="year" name="year" placeholder="Year" required>
+        </div>
+
+        <div>
+            <label for="quantity">Quantity:</label>
+            <input type= int id="quantity" name="quantity" placeholder="Quantity" required>
+        </div>
+
+        <div>
+            <label for="for_sale">For Sale:</label>
+            <input type= boolean id="for_sale" name="for_sale" placeholder="For Sale" required>
+        </div>
+
+
+        <div>
+            <label for="vehicle">Vehicle:</label>
+            <select id="vehicle" name="vehicle_id">
+              {% for vehicle in all_vehicle %}
+                <option value="{{ vehicle.id }}">{{ vehicle.display_name() }}</option>
+              {% endfor %}
+            </select>
+        </div>
+        <button type="submit">Add Vehicle to Stock</button>
+
     </form>
 </div>
 
