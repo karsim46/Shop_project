@@ -33,8 +33,8 @@ def create_vehicle():
     for_sale = request.form['for_sale']
     make = request.form['make']
     image = request.form['image']
-    manufacturer = manufacturer_repository.select(request.form['manufacturer.id'])
-    vehicle = Vehicle(description, engine, gearbox, colour, price, year, quantity, for_sale, make, image, manufacturer)
+    manufacturer = manufacturer_repository.select(request.form['manufacturer_id'])
+    vehicle = Vehicle(description, engine, gearbox, colour, price, year, quantity, for_sale, manufacturer, make, image )
     vehicle_repository.save(vehicle)
     return redirect('/vehicles')
 
