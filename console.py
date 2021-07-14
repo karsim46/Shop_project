@@ -23,6 +23,6 @@ vehicle_repository.save(vehicle1)
 vehicle2 = Vehicle("Charger", 5.0, "Automatic", "Orange", 49000, 1979, 1,True, manufacturer2,"Dodge","https://s1.cdn.autoevolution.com/images/news/80k-1969-dodge-charger-is-a-general-lee-clone-153739_1.jpg")
 vehicle_repository.save(vehicle2)
 
-vehicle3 = Vehicle("Transam", 4.0, "Automatic", "Black", 38000, 1982, 1, True, manufacturer3, "Pontiac","2000", "https://www.carscoops.com/wp-content/uploads/2020/01/1982-pontiac-firebird-kitt-replica-george-barris-0.jpg")
+vehicle3 = Vehicle("Transam", 4.0, "Automatic", "Black", 38000, 1982, 1, True, manufacturer3, "Pontiac","https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/K.I.T.T._Nachbau_aus_Deutschland.jpg/800px-K.I.T.T._Nachbau_aus_Deutschland.jpg")
 vehicle_repository.save(vehicle3)
 

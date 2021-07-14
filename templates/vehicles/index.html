@@ -9,13 +9,14 @@
             <a href="/vehicles/{{vehicle.id}}">{{vehicle.description}} </a>
              <p><i>{{vehicle.display_name()}}</i></p>
              
-             <div id="image">
-             <img src={{vehicle.image}}>
-            </div>
+             
          </div> 
         </div class="buttons">
     </div>
     <div class="buttons">
+      <div id="image">
+        <img src={{vehicle.image}} width="200" height="150">
+       </div>
 
       <form class="delete-form" action="/vehicles/{{vehicle.id}}/delete" method="POST">
         <button class="trash-button"><i class="fa fa-trash-o fa-3x" style="color:grey" aria-hidden="true"></i></button>
