@@ -67,3 +67,6 @@ list-style: none;
   width: 300px; 
   margin: 0 auto;
 }
+html {
+  background-color: blanchedalmond;
+}
