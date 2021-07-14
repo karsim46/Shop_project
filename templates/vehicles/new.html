@@ -51,7 +51,7 @@
         <div>
             <label for="vehicle">Vehicle:</label>
             <select id="vehicle" name="vehicle_id">
-              {% for vehicle in all_vehicle %}
+              {% for vehicle in all_vehicles %}
                 <option value="{{ vehicle.id }}">{{ vehicle.display_name() }}</option>
               {% endfor %}
             </select>

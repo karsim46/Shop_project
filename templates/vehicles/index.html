@@ -11,6 +11,14 @@
          </div> 
         </div class="buttons">
     </div>
+    <div class="buttons">
+
+      <form class="delete-form" action="/vehicles/{{vehicle.id}}/delete" method="POST">
+        <button class="trash-button"><i class="fa fa-trash-o fa-3x" style="color:grey" aria-hidden="true"></i></button>
+      </form>
+    </div>
+  </div>
+</div>
 {% endfor %}   
    
   </div>
