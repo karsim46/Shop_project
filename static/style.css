@@ -28,7 +28,8 @@
     background-color: skyblue;
 }
 .main-nav li:first-child {
-  margin-right: auto;
+  justify-content: flex-start
+  
 }
 .main-nav li {
 list-style: none;
