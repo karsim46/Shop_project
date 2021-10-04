@@ -17,6 +17,11 @@ Build an app which allows a shopkeeper to track their shop's inventory. This is 
 
 eBay, Amazon (back end only), Magento
 
+<img width="800" height="500" alt="Screenshot 04/10/2021 img3" src="https://user-images.githubusercontent.com/83863108/135868975-71fe81a5-cea9-4a3f-bcd5-c9899d458152.png">
+<img width="800" height="500" alt="Screenshot 04/10/2021 img4" src="https://user-images.githubusercontent.com/83863108/135869152-96c4a8ad-3d43-43a3-9417-fbcfa7cc9d81.png">
+<img width="800" height="500" alt="Screenshot 04/10/2021 img5" src="https://user-images.githubusercontent.com/83863108/135869235-b8234df5-95cb-4a72-8694-e995445df2a2.png">
+
+
 # Project - Web Programming with Python
 
 :star: Remember to gather PDA evidence :star:
